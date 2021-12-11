@@ -142,5 +142,8 @@ h1{
     h1{
       animation-name: dissolve;
     }
+    .parallax{
+        background-attachment: scroll;
+    }
   }
 
