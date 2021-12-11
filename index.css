@@ -1,0 +1,150 @@
+
+/****** card image ******/
+.card img{
+    border-radius: 6px;
+}
+
+
+/****** margin/padding start ******/
+
+h2{
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+.cite{
+    color: gray;
+}
+
+.card{
+    padding-bottom: 30px;
+}
+
+.food-card:hover{
+    transform: scale(1.03);
+    
+}
+
+.card-grid{
+    margin: 0 auto;
+
+    /* Grid container is here!! */
+    display: grid;
+}
+
+
+.cite-sectioin{
+    padding-bottom: 50px;
+}
+
+.cite-sectioin p{
+    padding-bottom: 0;
+}
+
+#index a{
+    border: 1px solid white;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.nav_item a:active, .nav_item a:focus{
+    text-decoration: underline;
+}
+
+
+.intro-desription{
+    padding-top: 40px;
+}
+
+
+
+/**** Parallax image HERE****/
+.parallax{
+    background-image: url("../images/food/hero_img.jpg");
+    background-image:none;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/***********!!! Medium devices (landscape tablets, 768px and up) !!!************/
+@media screen and (min-width: 768px) {
+    .card-grid{
+        /* Grid container is here!! */
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px 15px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .parallax{
+        background-image: url("../images/food/hero_img.jpg");
+        background-color: rgb(46, 45, 66);
+        min-height: 150px;
+    }
+
+}
+
+/***********!!! Large devices (laptops/desktops, 992px and up) !!!************/
+@media screen and (min-width: 992px) {
+    .card-grid{
+        /* Grid container is here!! */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px 20px;
+    }
+
+    .parallax{
+        background-image: url("../images/food/hero_img.jpg");
+        background-color: rgb(46, 45, 66);
+        min-height: 200px;
+    }
+
+    h1{
+        font-size: 80px;
+    }
+
+    /****** CSS animation start ******/
+
+h1{
+    font-size: 80px;
+    color: #ffffffd3;
+        /* animation 參數設定 */
+        animation-name: textmove;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 2s;    /*動畫持續時間，單位為秒*/
+        /*animation-delay: 0s;    動畫延遲開始時間*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/  
+}
+
+/* 關鍵影格(@keyframe) */
+@keyframes textmove {
+    from{
+        top:-100;
+        font-size: 50px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        font-size: 80px;
+        opacity: 1;
+    }
+}
+
+
+}
+
+/*********** reduce motion ************/
+
+@media (prefers-reduced-motion) {
+    h1{
+      animation-name: dissolve;
+    }
+    .parallax{
+        background-attachment: scroll;
+        background-size: contain;
+    }
+  }
+
