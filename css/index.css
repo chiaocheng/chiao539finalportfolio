@@ -136,6 +136,11 @@ h1{
 
 }
 
+/*********** reduce motion ************/
 
-
+@media (prefers-reduced-motion) {
+    h1{
+      animation-name: dissolve;
+    }
+  }
 
