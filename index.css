@@ -144,7 +144,6 @@ h1{
     }
     .parallax{
         background-attachment: scroll;
-        background-size: contain;
     }
   }
 
